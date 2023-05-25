@@ -20,3 +20,18 @@ body{
     gap: 0.5rem;
 
 }
+
+
+.pantalla{ 
+    grid-column: 1/ -1; 
+    background-color: #9DB2BF;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+
