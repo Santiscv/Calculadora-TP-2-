@@ -9,3 +9,14 @@ body{
     place-items: center;
 }
 
+.calculadora{
+    background-color: #DDE6ED;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 400px;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    gap: 0.5rem;
+
+}
