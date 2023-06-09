@@ -4,15 +4,15 @@ var botones = document.querySelectorAll(".btn");
 
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
-        var botonApretado = boton.textContent;
+        var boton_apretado = boton.textContent;
 
         if (boton.id === "c") {
             pantalla.textContent = "0";
-            return 0;
+            return;
         }
 
         if (boton.id === "borrar") {
-            if (pantalla.textContent.length === 1 || pantalla.textContent === "Error!") {
+            if (pantalla.textContent.length === 1 || pantalla.textContent === "Math Error") {
                 pantalla.textContent = "0";
             } else {
                 pantalla.textContent = pantalla.textContent.slice(0, -1);
@@ -24,15 +24,15 @@ botones.forEach(boton => {
             try {
                 pantalla.textContent = eval(pantalla.textContent);
             } catch {
-                pantalla.textContent = "Error!";
+                pantalla.textContent = "Math Error";
             }
             return;
         }
 
-        if (pantalla.textContent === "0" || pantalla.textContent === "Error!") {
-            pantalla.textContent = botonApretado;
+        if (pantalla.textContent === "0" || pantalla.textContent === "Math Error") {
+            pantalla.textContent = boton_apretado;
         } else {
-            pantalla.textContent += botonApretado;
+            pantalla.textContent += boton_apretado;
         }
     })
 })
